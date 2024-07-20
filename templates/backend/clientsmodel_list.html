@@ -1,0 +1,20 @@
+{% extends "backend/base.html" %}
+
+{% block content %}
+
+
+    <!-- Iterate over object_list -->
+    {% for object in object_list %} 
+    <!-- Display Objects -->
+    <pre style="margin: 0;padding: 0;">
+    name: {{ object.name }}
+    email {{ object.email }} inch
+    mobile: {{ object.moblie }}
+    gst_no: {{ object.gst_no }}
+    address: {{ object.address }}
+    </pre>
+    {% empty %} 
+    <li>No objects yet.</li> 
+{% endfor %} 
+
+{% endblock content %}

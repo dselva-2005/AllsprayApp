@@ -1,0 +1,11 @@
+{% extends "backend/baseform.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block link %}
+    <form action="{% url "formset" %}" method="post">
+{% endblock link %}
+
+{% block fields %}
+    {{ invoice|crispy }}
+{% endblock fields %}
